@@ -17,5 +17,13 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mongoose": "^8.20.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Altakrim/movie-master-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Altakrim/movie-master-server/issues"
+  },
+  "homepage": "https://github.com/Altakrim/movie-master-server#readme"
 }
