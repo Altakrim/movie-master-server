@@ -2,8 +2,18 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const coolieParser = require("cookie-parser")
 const app = express();
 const port = process.env.PORT || 5000;
+
+const admin = require("firebase-admin");
+
+const serviceAccount = require("./movie-master-pro--firebase.json.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
 
 
 
@@ -44,6 +54,8 @@ mongoose.connect(uri)
 // Middlewares 
 app.use(cors());
 app.use(express.json());
+app.use(coolieParser());
+
 
 //  Root
 app.get('/', (req, res) => {
